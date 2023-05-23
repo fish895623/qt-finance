@@ -19,7 +19,7 @@ set(CMAKE_CXX_FLAGS_RELEASE
 find_package(QT NAMES Qt6 Qt5 REQUIRED COMPONENTS Widgets Network WebSockets)
 find_package(Qt${QT_VERSION_MAJOR} REQUIRED COMPONENTS Widgets Network WebSockets)
 
-set(PROJECT_SOURCES main.cpp mainwindow.cpp mainwindow.h mainwindow.ui)
+file(GLOB PROJECT_SOURCES "*.h" "*.cpp" "*.ui")
 
 if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
   qt_add_executable(chart MANUAL_FINALIZATION ${PROJECT_SOURCES})

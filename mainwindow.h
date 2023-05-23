@@ -1,10 +1,12 @@
 #ifndef MAINWINDOW_H
 #define MAINWINDOW_H
 
+#include <qobject.h>
 #include <QMainWindow>
 #include <QNetworkAccessManager>
 #include <QNetworkReply>
 #include <QTextEdit>
+#include "echoclient.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui {
@@ -22,6 +24,7 @@ class MainWindow : public QMainWindow {
  private:
   Ui::MainWindow* ui;
   QNetworkAccessManager* manager;
+  EchoClient* a;
   QNetworkRequest request;
 
  private slots:
